@@ -23,7 +23,6 @@ libfprint_sources = [
     'fpi-poll.c',
     'fpi-usb.h',
     'fpi-usb.c',
-    'drivers/driver_ids.h',
 ]
 
 nbis_sources = [

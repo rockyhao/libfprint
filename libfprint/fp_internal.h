@@ -33,7 +33,6 @@
 #include "fpi-dev-img.h"
 #include "fpi-data.h"
 #include "fpi-img.h"
-#include "drivers/driver_ids.h"
 
 /* Global variables */
 extern libusb_context *fpi_usb_ctx;
@@ -143,7 +142,6 @@ enum fp_driver_type {
 };
 
 struct fp_driver {
-	const uint16_t id;
 	const char *name;
 	const char *full_name;
 	const struct usb_id * const id_table;
