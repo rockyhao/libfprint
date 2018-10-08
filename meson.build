@@ -111,6 +111,15 @@ if get_option('x11-examples')
     endif
 endif
 
+if get_option('gtk-examples')
+    gnome = import('gnome')
+
+    gtk_dep = dependency('gtk+-3.0', required: false)
+    if not gtk_dep.found()
+        error('GTK+ 3.x is required for GTK+ examples')
+    endif
+endif
+
 libfprint_conf.set('API_EXPORTED', '__attribute__((visibility("default")))')
 configure_file(output: 'config.h', configuration: libfprint_conf)
 
